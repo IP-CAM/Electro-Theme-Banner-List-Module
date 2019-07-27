@@ -1,0 +1,37 @@
+{#
+electrothemebannerlist.php
+
+Template for  front page.
+#}
+<!-- SECTION Banner List -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			{% for home_banner in banners %}
+			<div class="col-md-4 col-xs-6">
+				<!-- shop -->
+				<div class="shop">
+					<!-- shop-img -->
+					<div class="shop-img">
+						<img src="{{ home_banner.image }}" alt="{{ home_banner.name }}">
+					</div>
+					<!-- /shop-img -->
+
+					<!-- shop-body -->
+					<div class="shop-body">
+						<h3>{{ home_banner.name }}</h3>
+						<a href="{{ home_banner.link }}" class="cta-btn">{{ home_banner.name }} <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+					<!-- /shop-body -->
+				</div>
+				<!-- /shop -->
+			</div>
+			{% endfor %}
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /SECTION Banner List -->
